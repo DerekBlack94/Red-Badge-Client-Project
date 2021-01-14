@@ -1,0 +1,85 @@
+import React, { Component } from "react";
+
+import { TextField, Button } from "@material-ui/core";
+import APIURL from '../../helpers/environment'
+interface Props {
+    token: string | null;
+    appointmentId: number;
+    // appointment:{
+    //     savedDate: string;
+    //     userInput: string;
+    //     id: number;
+    }
+    // bike: any,
+
+
+
+
+interface State {
+    // appointment: any;
+    // userbike:string;
+//         savedDate: string;
+//         userInput: string;
+//         id: number} |null;
+// }
+}
+
+class DeleteAppointment extends Component<Props, State>{
+    constructor(props: Props){
+        super(props);
+        this.state = {
+            // appointment: null,
+            // userbike: "0"
+        }
+        this.deleteAppointment = this.deleteAppointment.bind(this)
+    }
+
+
+
+deleteAppointment() {
+    // const AppId = this.state.appointment.id
+    fetch(`${APIURL}/appointments/${this.props.appointmentId}`, {
+      method: "DELETE",
+      headers: new Headers({
+        "Content-Type": "application/json",
+        Authorization: `${this.props.token}`,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        // this.setState({
+        //   appointment: data.deleteUserBike,
+        // });
+        console.log("response", data);
+        window.location.reload();
+      });
+  }
+  
+  componentDidMount() {
+    // this.deleteAppointment();
+    console.log('User Appointments' , this.props.appointmentId)
+  }
+
+render(){
+  const buttonStyle ={
+    // display: 'flex',
+    // justifyContent: 'right',
+    // alignContent: 'right',
+    // bottom:"10vh",
+    marginLeft: "2em"
+  
+
+  }
+    return(
+        <div>
+            {/* <h1>can you see me?</h1> */}
+            {/* <div>how about this?</div> */}
+            <Button  variant='contained' onClick={this.deleteAppointment}>Delete</Button>
+            
+
+        </div>
+    )
+}
+}
+
+export default DeleteAppointment;
