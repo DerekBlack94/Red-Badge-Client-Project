@@ -11,7 +11,7 @@ type State = {
 }
 
 
-class App extends Component<{}, State> {
+class AppIndex extends Component<{}, State> {
     constructor(props: {}) {
       super(props);
       this.state = {
@@ -84,4 +84,4 @@ class App extends Component<{}, State> {
         )
     }
 }
-export default App
+export default AppIndex;
