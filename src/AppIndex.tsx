@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import Main from './components/Main/Main';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from './components/Main/Home'
+import Snackbar from "@material-ui/core/Snackbar";
 
 type State = {
     
     token: string| null ;
     userId: number;
     role: 'user' | 'admin';
+    
     
 }
 
@@ -19,6 +21,7 @@ class AppIndex extends Component<{}, State> {
         token: localStorage.getItem('token') ? localStorage.getItem('token') : "",
         userId: 0,
         role: 'user',
+       
        
       }
       console.log(this.state.token)
@@ -54,34 +57,27 @@ class AppIndex extends Component<{}, State> {
       });
     }
 
-    // roleAdmin () {
-    //   this.setState({
-        
-    //     role: "admin"
-    //   })
-    // }
+   
 
     roleAdmin = (newRole: string) => {
       this.setState({role: "admin"})
       localStorage.setItem('role', "admin");
   }
 
-    // roleUser () {
-    //   this.setState({
-    //     role: "user"
-    //   })
-    // }
+  
     roleUser = (newRole: string) => {
       this.setState({role: "user"})
       localStorage.setItem('role', "user");
   }
+
+  
 
 
     render() {
         return (
             <div className='app'>
 
-                <Main updateToken={this.updateToken} token={this.state.token} clearToken={this.clearToken} roleAdmin={this.roleAdmin.bind(this)} roleUser={this.roleUser.bind(this)} />
+                <Main updateToken={this.updateToken}  token={this.state.token} clearToken={this.clearToken} roleAdmin={this.roleAdmin.bind(this)} roleUser={this.roleUser.bind(this)} />
               {/* <Home /> */}
             </div>
         )

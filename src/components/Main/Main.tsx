@@ -33,6 +33,7 @@ interface Props {
     // role: "user" | "admin"
     roleUser: Function,
     roleAdmin: Function,
+    
 }
 
 const Main = (props: Props) => {

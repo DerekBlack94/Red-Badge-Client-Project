@@ -9,6 +9,8 @@ interface Props {
     updateToken(newToken: string, userId: number, role: 'user' | 'admin'): void,
     roleAdmin:Function,
     roleUser: Function
+    
+
 }
 
 const SignUpDisplay = (props: Props) => {
@@ -33,7 +35,7 @@ const SignUpDisplay = (props: Props) => {
         <Container style={divStyle}>
             <div>
                 <h1 style={title} >SIGN UP</h1>
-                <Signup roleAdmin={props.roleAdmin} roleUser={props.roleUser} updateToken={props.updateToken} />
+                <Signup roleAdmin={props.roleAdmin}  roleUser={props.roleUser} updateToken={props.updateToken} />
             </div>
         </Container>
     )
