@@ -23,14 +23,8 @@ import SignUpDisplay from '../Auth/SignUpDisplay';
 import LoginDisplay from '../Auth/LoginDisplay';
 
 
-const useStyles = makeStyles(()=>
-    createStyles({
-        mainDiv: {
-            backgroundColor: 'green',
-        },
-        
-    })
-)
+
+    
 
 interface Props {
     updateToken(newToken: string, userId: number, role: 'user' | 'admin'): void,
@@ -42,10 +36,12 @@ interface Props {
 }
 
 const Main = (props: Props) => {
-    const classes = useStyles();
+    
 
   
-
+const mainStyle = {
+    backgroundColor: "green"
+}
     
 
     
@@ -53,8 +49,9 @@ const Main = (props: Props) => {
     return (
             <React.Fragment>
                 <Router>
-                    <div className={classes.mainDiv}>
+                    <div  style={mainStyle}>
                      <NavbBar updateToken={props.updateToken} clearToken={props.clearToken} />
+
                      
                     <Switch>
                         <Route exact path='/home' render={()=>(<Home />)} />
@@ -65,16 +62,15 @@ const Main = (props: Props) => {
                         <Route exact path='/deleteuserbike' render={()=>(<DeleteUserBikeDisplay token={props.token} />)} />
                         <Route exact path='/createapp' render={()=>(<CreateAppointmentDisplay token={props.token} />)} />
                         <Route exact path='/getapp' render={()=>(<GetAppointmentDisplay token={props.token} />)} />
-                        {/* <Route exact path='/getbike' render={()=>(<GetUserBikeDisplay token={props.token} />)} /> */}
+                       
                         <Route exact path='/deleteapp' render={()=>(<DeleteAppointmentDisplay token={props.token} />)} />
                         <Route exact path='/updatebike' render={()=>(<UpdateUserBikeDisplay token={props.token} />)} />
                         <Route exact path='/updateapp' render={()=>(<UpdateAppointmentDisplay token={props.token} />)} />
                     </Switch>
-                    {/* <div className={classes.bottomNavDiv}>
-                        {bottomNavHandle()}
-                    </div> */}
+                     
                     </div>
                 </Router>
+                 
             </React.Fragment>
                         )
 }

@@ -28,8 +28,8 @@ const GetAppointmentDisplay =(props: Props)=>{
 
     return(
         <Container style={divStyle}>
-            <img src={image} width="250vw" height="250vh" />
             <div>
+            <img src={image} width="250vw" height="250vh" />
             <h1 style={textStyle}>Your Scheduled Appointmnets</h1>
             
             <GetAppointment  token={props.token} />

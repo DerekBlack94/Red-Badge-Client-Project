@@ -78,7 +78,10 @@ updateAppointment() {
 
   render() {
     const divStyle = {
-      backgroundColor: "white"
+      backgroundColor: "white",
+      marginLeft: "5em",
+      marginRight: "4em",
+      // paddingRight: "4em"
     }
     const textStyle = {
       color: "white",
@@ -90,11 +93,15 @@ updateAppointment() {
       paddingTop: "6em"
     }
     const buttonStyle ={
-      display: 'flex',
-      justifyContent: 'right',
-      alignContent: 'right',
-      left: "9em",
-      marginTop: "2em"
+      // display: 'flex',
+      // justifyContent: 'right',
+      // alignContent: 'right',
+      // left: "em",
+      
+      left: "8em",
+      marginTop: "1em",
+      right: "20px",
+      marginBottom: "1em"
 
     }
     return (

@@ -147,18 +147,23 @@ updateUserBike() {
   render() {
     const divStyle = {
       backgroundColor: "white",
+      marginLeft: "5em",
+      marginRight: "4em"
       
     }
     const buttonStyle ={
-      display: 'flex',
-      justifyContent: 'right',
-      alignContent: 'right',
-      left: "9em",
-      marginTop: "2em"
+      // display: 'flex',
+      // justifyContent: 'right',
+      // alignContent: 'right',
+      left: "8em",
+      marginTop: "2em",
+      marginBottom: "2em"
+      // right: "20px"
+     
 
     }
     const mainStyle ={
-      paddingTop: "6em"
+      // paddingTop: "5em"
     }
     return (
       <div style={mainStyle}>
@@ -206,6 +211,7 @@ updateUserBike() {
             onChange={(e) => this.setTireSize(e.target.value)}
           />
           <TextField style={divStyle}
+            
             id="outlined-basic"
             label="what's new"
             variant="outlined"

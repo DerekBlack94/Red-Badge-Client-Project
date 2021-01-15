@@ -62,11 +62,15 @@ deleteUserBike() {
 
 render(){
   const buttonStyle ={
-    display: 'flex',
-    justifyContent: 'right',
-    alignContent: 'right',
-    bottom:"5vh",
-    marginLeft: "2em"
+    // display: 'flex',
+    // justifyContent: 'right',
+    // alignContent: 'right',
+    bottom:"1vh",
+    marginLeft: "2em",
+    left: "6em",
+    marginTop: "2em",
+    right: "20px",
+    marginBottom: "1em"
     
     
   

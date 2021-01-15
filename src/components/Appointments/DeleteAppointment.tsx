@@ -66,7 +66,11 @@ render(){
     // justifyContent: 'right',
     // alignContent: 'right',
     // bottom:"10vh",
-    marginLeft: "2em"
+    
+    left: "8em",
+    marginTop: "2em",
+    right: "20px",
+    marginBottom: "1em"
   
 
   }
@@ -74,7 +78,7 @@ render(){
         <div>
             {/* <h1>can you see me?</h1> */}
             {/* <div>how about this?</div> */}
-            <Button  variant='contained' onClick={this.deleteAppointment}>Delete</Button>
+            <Button style={buttonStyle}  variant='contained' onClick={this.deleteAppointment}>Delete</Button>
             
 
         </div>

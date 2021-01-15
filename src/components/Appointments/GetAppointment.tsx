@@ -79,7 +79,7 @@ class GetAppointment extends Component<Props, State> {
 
     const paperStyle = {
       backgroundColor: "green",
-      width: "17vw"
+      width: "20vw"
 
     }
     const textStyle = {
@@ -99,9 +99,9 @@ class GetAppointment extends Component<Props, State> {
                 return(
                     <div key={index} >
                       <Paper style={paperStyle}>
-                        <h1 style={textStyle}>Appintment Number:{appointment.id}</h1>
-                        <h1 style={textStyle}>Appointments Time{appointment.savedDate}</h1>
-                        <h1 style={textStyle}>Comments:{appointment.userInput}</h1>
+                        <h2 style={textStyle}>Appintment Number:{appointment.id}</h2>
+                        <h2 style={textStyle}>Appointments Time:{appointment.savedDate}</h2>
+                        <h2 style={textStyle}>Comments:{appointment.userInput}</h2>
                         {/* <h1>{appointment.id}</h1> */}
                         {/* {localStorage.getItem('')} */}
                         {/* {appointment.userId.toString() === localStorage.getItem('userId')? <DeleteAppointment appointmentId={appointment.id} token={this.props.token} /> : <div/> } */}
@@ -110,6 +110,8 @@ class GetAppointment extends Component<Props, State> {
 
                         {appointment.userId.toString() === localStorage.getItem('userId')? <DeleteAppointment appointmentId={appointment.id} token={this.props.token} /> : <div/> }
                         {appointment.userId.toString() === localStorage.getItem('userId')? <UpdateAppointment appointmentId={appointment.id} token={this.props.token} /> : <div/> }
+                        {localStorage.getItem("role") === "admin" ? <DeleteAppointment appointmentId={appointment.id} token={this.props.token} /> : <div/> }
+                        {localStorage.getItem("role") === "admin" ? <UpdateAppointment appointmentId={appointment.id} token={this.props.token} /> : <div/> }
                         </Paper>
                     </div>
                 )

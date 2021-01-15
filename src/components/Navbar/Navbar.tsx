@@ -9,6 +9,7 @@ import Signup from '../Auth/SignUpDisplay'
 // import CreateUserBike from './UserBike/CreateUserBike'
 import Login from '../Auth/LoginDisplay'
 import { isClassExpression } from 'typescript';
+import Home from '../Main/Home'
 
 
 interface Props {
@@ -33,25 +34,19 @@ const NavbBar = (props: Props) => {
                         <Drawer/>
                         {/* {this.props.token === "" ? <Drawer /> : null } */}
                     </Grid>
-                    <Grid item xl={12}></Grid>
                     <Grid item xs style={divStyle}>
+                    <Grid item xl={12}></Grid>
                         {/* <Signup updateToken={props.updateToken}/> */}
                         {/* <Login updateToken={props.updateToken} /> */}
                         {/* <Drawer /> */}
                         <Grid item xl>
-                        {/* <Link to='/createbike'>Create Bike</Link>
-                        <Link to='/createapp'>Create App</Link>
-                        <Link to='/getapp'>your appointments</Link>
-                        <Link to='/getbike'>your bikes</Link>
-                        <Link to='/deleteapp'>Delete Appointment</Link>
-                        <Link to='/deleteuserbike'>Delete User Bike</Link>
-                        <Link to='/updatebike'>Update User Bike</Link>
-                    <Link to='/updateapp'>Update Your Appointment</Link> */}
+                        
                     <Auth clearToken={props.clearToken} />
 
                     </Grid>
                     </Grid>
                 </Grid>
+                    {/* <Home /> */}
             </Toolbar>
         </AppBar>
     )

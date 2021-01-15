@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Main from './components/Main/Main';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Home from './components/Main/Home'
 
 type State = {
     
@@ -79,7 +80,9 @@ class AppIndex extends Component<{}, State> {
     render() {
         return (
             <div className='app'>
+
                 <Main updateToken={this.updateToken} token={this.state.token} clearToken={this.clearToken} roleAdmin={this.roleAdmin.bind(this)} roleUser={this.roleUser.bind(this)} />
+              {/* <Home /> */}
             </div>
         )
     }
