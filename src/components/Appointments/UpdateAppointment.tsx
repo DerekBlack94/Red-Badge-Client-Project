@@ -93,10 +93,6 @@ updateAppointment() {
       paddingTop: "6em"
     }
     const buttonStyle ={
-      // display: 'flex',
-      // justifyContent: 'right',
-      // alignContent: 'right',
-      // left: "em",
       
       left: "8em",
       marginTop: "1em",

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { createStyles, withStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 import {Container,} from "@material-ui/core";
-import { ExpandMore } from "@material-ui/icons";
+
 import GetUserBikeDisplay from "./GetUserBikeDisplay";
 import DeleteUserBike from './DeleteUserBike'
 import UpdateUserBike from './UpdateUserBike'
@@ -19,7 +19,7 @@ interface State {
 
 interface Props {
   token: string | null;
-  // classes: any;
+  
 }
 interface userBikeInterface {
   make: string,
@@ -67,12 +67,8 @@ class GetUserBike extends Component<Props, State> {
     this.fetchedUserBike();
     console.log('User Bikes' , this.state.userbike)
   }
-//   const bottomTokenCheck = () => {
-//     return this.props.token === '' ? null : <DeleteUserBike userBikeId={bike.id} token={this.props.token} />
-// }
-  adminCheck(){
-    
-  }
+
+  
 
  
 

@@ -24,14 +24,27 @@ const GetUserBikeDisplay = (props: Props) => {
         paddingRight: "5em"
     }
     const textStyle ={
-        color: "green"
+        color: "green",
+        display: "flex",
+        justifyContent: 'center',
+        alignContent: 'center',
+        fontSize: "4em"
+        
+
+    }
+    const imgStyle = {
+        display: "flex",
+        justifyContent: 'center',
+        alignContent: 'center',
+        marginTop: "3em",
+
     }
     
     return (
         <Container style={divStyle} >
         <div>
-            <img  src={image} width="250vw" height="250vh" /> 
-        <h1 style={textStyle}>User Bikes</h1>
+            <img style={imgStyle}  src={image} width="300vw" height="300vh" /> 
+        <h1 style={textStyle}>Bikes</h1>
         <GetUserBike token={props.token}/>
         </div>
 

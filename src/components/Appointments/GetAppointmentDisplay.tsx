@@ -21,7 +21,18 @@ const GetAppointmentDisplay =(props: Props)=>{
         paddingTop: '3em'
     }
     const textStyle ={
-        color: "green"
+        color: "green",
+        display: "flex",
+        justifyContent: 'center',
+        alignContent: 'center',
+        fontSize: "3em"
+    }
+    const imgStyle = {
+        display: "flex",
+        justifyContent: 'center',
+        alignContent: 'center',
+        marginTop: "3em",
+
     }
 
     console.log('GetAppointment')
@@ -29,8 +40,8 @@ const GetAppointmentDisplay =(props: Props)=>{
     return(
         <Container style={divStyle}>
             <div>
-            <img src={image} width="250vw" height="250vh" />
-            <h1 style={textStyle}>Your Scheduled Appointmnets</h1>
+            <img style={imgStyle} src={image} width="300vw" height="300vh" />
+            <h1 style={textStyle}>Scheduled Appointments</h1>
             
             <GetAppointment  token={props.token} />
 
